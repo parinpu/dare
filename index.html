@@ -7,7 +7,8 @@
     <title>oda</title>
     <style>
         html {
-            background-color: #1f1f1f;
+            height: 100%;
+            background: linear-gradient(#16161b, #0f0f13) ;
             color: white;
             font-family: Arial, Helvetica, sans-serif;
         }
@@ -51,18 +52,21 @@
     </div>
     <div id="stack" hidden class="dong">xD</div>
     <div class="flex-culiao">
-        <h2>🃏 xD </h2><button class="btn expand-dong" onclick="expand('monaxina')">🙄</button>
+        <h2>🐒 xD </h2><button class="btn expand-dong" onclick="expand('monaxina')">🙄</button>
     </div>
     <div id="monaxina" hidden class="dong gorightpls">
-        <img src="11457988.81000001_1429891050417.png" alt="">
+        <img src="11457988.81000001_1429891050417.png" alt="" onclick="play()">
     </div>
-    <hr>
 </body>
 
 <script>
     function expand(kcosa) {
         const target = document.getElementById(kcosa)
         target.toggleAttribute('hidden')
+    }
+    function play() {
+        var audio = new Audio('93.mp3');
+        audio.play();
     }
 </script>
 </html>
