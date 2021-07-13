@@ -5,14 +5,64 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>oda</title>
+    <style>
+        html {
+            background-color: #1f1f1f;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        body {
+            width: 1024px;
+            margin: auto;
+        }
+        .btn {
+            border: 1px solid #cacaca30;
+            padding: 0.25rem 0.75rem;
+            color: white;
+            background: #2b2b2b;
+            border-radius: 0.25rem;
+        }
+        .btn:hover {
+            background-color: #3d3d3d;
+            transition-duration: 250ms;
+        }
+        .dong {
+            border: 1px solid rgb(255, 186, 243);
+            border-radius: 0.25rem;
+            padding: 1rem;
+        }
+        .flex-culiao {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    </style>
 </head>
 <body>
-    <button onclick="test()">Hola</button>
+    <h1>Denme pega</h1>
+    <hr>
+    <div class="flex-culiao">
+        <h2>💻 Proyectitos bonitos </h2><button class="btn expand-dong" onclick="expand('proyectitos')">🙄</button>
+    </div>
+    
+    <div id="proyectitos" hidden class="dong">xD</div>
+    <div class="flex-culiao">
+        <h2>🃏 Stack </h2><button class="btn expand-dong" onclick="expand('stack')">🙄</button>
+    </div>
+    <div id="stack" hidden class="dong">xD</div>
+    <div class="flex-culiao">
+        <h2>🃏 xD </h2><button class="btn expand-dong" onclick="expand('monaxina')">🙄</button>
+    </div>
+    <div id="monaxina" hidden class="dong gorightpls">
+        <img src="11457988.81000001_1429891050417.png" alt="">
+    </div>
+    <hr>
 </body>
 
 <script>
-    function test() {
-        alert("hola")
+    function expand(kcosa) {
+        const target = document.getElementById(kcosa)
+        target.toggleAttribute('hidden')
     }
 </script>
 </html>
