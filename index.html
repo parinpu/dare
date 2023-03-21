@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -23,17 +24,39 @@
             text-align: center;
         }
 
+        .gatoqq-cool-body {
+            text-align: justify;
+            padding: 1rem;
+        }
     </style>
 </head>
+
 <body>
     <h1 class="gatoqq" onclick="play()"><img src="img/402592994476327.gif" alt=""></h1>
+    <p class="gatoqq-cool-body">
+        MatrixBlack era un jugador de Team Fortress 2 que se creía el mejor del mundo. Se dedicaba a arruinar las
+        partidas de los demás con trucos, insultos y amenazas. Un día se encontró con los GatoQQs, un equipo de amigos
+        que jugaban por diversión y que no se dejaban intimidar por nadie. MatrixBlack los desafió a una batalla en el
+        mapa Dustbowl, pensando que sería fácil derrotarlos. Pero se equivocó. Los GatoQQs demostraron ser unos rivales
+        formidables, que usaban la estrategia, la cooperación y el humor para vencer a sus enemigos. Con sus clases
+        favoritas (Pyro, Medic, Engineer y Spy), lograron capturar todos los puntos de control y hacer explotar la base
+        de MatrixBlack. Este se enfureció tanto que empezó a llorar y a gritar por el micrófono, mientras los GatoQQs
+        celebraban su victoria con risas y bailes. Así fue como MatrixBlack se convirtió en el villano más odiado de
+        Team Fortress 2 y cómo los GatoQQs lo destruyeron y conquistaron en una batalla épica.
+    </p>
 </body>
 <script>
+    var last = 0
     function play() {
-        let file = Math.floor(Math.random() * (6 - 1)) +1 
+        let file = last
+        while (file == last) {
+            file = Math.floor(Math.random() * (6 - 1 + 1)) + 1
+        }
+        last = file
         var audio = new Audio(`snd/${file}.mp3`);
         audio.play();
     }
 
 </script>
+
 </html>
