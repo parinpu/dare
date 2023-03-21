@@ -4,69 +4,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>oda</title>
+    <title>GatoQQ Inc</title>
     <style>
         html {
-            height: 100%;
-            background: linear-gradient(#16161b, #0f0f13) ;
-            color: white;
-            font-family: Arial, Helvetica, sans-serif;
+            background-image: url("img/gatoqq.jpg");
+            background-repeat: repeat;
         }
+
         body {
+            display: block;
             width: 1024px;
-            margin: auto;
+            margin: 125px auto;
+            background-color: lightgray;
+            border: 2px solid gray;
         }
-        .btn {
-            border: 1px solid #cacaca30;
-            padding: 0.25rem 0.75rem;
-            color: white;
-            background: #2b2b2b;
-            border-radius: 0.25rem;
+
+        .gatoqq {
+            text-align: center;
         }
-        .btn:hover {
-            background-color: #3d3d3d;
-            transition-duration: 250ms;
-        }
-        .dong {
-            border: 1px solid rgb(255, 186, 243);
-            border-radius: 0.25rem;
-            padding: 1rem;
-        }
-        .flex-culiao {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+
     </style>
 </head>
 <body>
-    <h1>Denme pega</h1>
-    <hr>
-    <div class="flex-culiao">
-        <h2>💻 Proyectitos bonitos </h2><button class="btn expand-dong" onclick="expand('proyectitos')">🙄</button>
-    </div>
-    
-    <div id="proyectitos" hidden class="dong">xD</div>
-    <div class="flex-culiao">
-        <h2>🃏 Stack </h2><button class="btn expand-dong" onclick="expand('stack')">🙄</button>
-    </div>
-    <div id="stack" hidden class="dong">xD</div>
-    <div class="flex-culiao">
-        <h2>🐒 xD </h2><button class="btn expand-dong" onclick="expand('monaxina')">🙄</button>
-    </div>
-    <div id="monaxina" hidden class="dong gorightpls">
-        <img src="11457988.81000001_1429891050417.png" alt="" onclick="play()">
-    </div>
+    <h1 class="gatoqq" onclick="play()"><img src="img/402592994476327.gif" alt=""></h1>
 </body>
-
 <script>
-    function expand(kcosa) {
-        const target = document.getElementById(kcosa)
-        target.toggleAttribute('hidden')
-    }
     function play() {
-        var audio = new Audio('93.mp3');
+        let file = Math.floor(Math.random() * (6 - 1)) +1 
+        var audio = new Audio(`snd/${file}.mp3`);
         audio.play();
     }
+
 </script>
 </html>
