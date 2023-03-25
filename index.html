@@ -39,11 +39,39 @@
         .gatoqq-cool-body:last-of-type {
             padding-bottom: 1rem;
         }
+
+        .gatoqq-title-container {
+            display: grid;
+            grid-template-columns: 33% auto 33%;
+        }
+
+        .gtq-item {
+            justify-content: center;
+            height: 100px;
+            align-items: center;
+            display: flex;
+        }
+
+        .gtq-img {
+            max-height: 100%;
+        }
+
     </style>
 </head>
 
-<body>
-    <h1 class="gatoqq" onclick="play()"><img src="img/402592994476327.gif" alt=""></h1>
+<body class="nerd">
+    <div class="gatoqq-title-container">
+        <div class="gtq-item">
+            <img class="gtq-img" src="img/nerd1.gif" alt="">
+        </div>
+        <div class="gtq-item">        
+            <h1 class="gatoqq" onclick="play()"><img src="img/402592994476327.gif" alt=""></h1>
+        </div>
+        <div class="gtq-item">
+            <img class="gtq-img" src="img/nerd2.gif" alt="">
+        </div>
+    </div>
+
     <p class="gatoqq-cool-body">
         GatoQQs era un grupo de Discord formado por amantes de los gatos y de las risas. Un día, decidieron hacer una
         broma al famoso youtuber y streamer Capitán Gato, que tenía su propia comunidad de Discord llamada GatitosWorld.
