@@ -62,13 +62,13 @@
 <body class="nerd">
     <div class="gatoqq-title-container">
         <div class="gtq-item">
-            <img class="gtq-img" src="img/nerd1.gif" alt="">
+            <img class="gtq-img" src="img/nerd1.gif" alt="" onclick="nerdPlay()">
         </div>
         <div class="gtq-item">        
             <h1 class="gatoqq" onclick="play()"><img src="img/402592994476327.gif" alt=""></h1>
         </div>
         <div class="gtq-item">
-            <img class="gtq-img" src="img/nerd2.gif" alt="">
+            <img class="gtq-img" src="img/nerd2.gif" alt="" onclick="nerdPlay()">
         </div>
     </div>
 
@@ -120,6 +120,7 @@
 </body>
 <script>
     var last = 0
+    var lastSound = 0
     function play() {
         let file = last
         while (file == last) {
@@ -128,6 +129,20 @@
         last = file
         var audio = new Audio(`snd/${file}.mp3`);
         audio.play();
+    }
+
+    function nerdPlay() {
+
+        let file = lastSound
+        while (file == lastSound) {
+            file = Math.floor(Math.random() * (4 - 1 + 1)) + 1
+        }
+        lastSound = file
+
+        console.log(`playing ${file}`)
+        var audio = new Audio(`snd/nerd${file}.mp3`);
+        audio.volume = 0.15
+        audio.play()
     }
 
 </script>
